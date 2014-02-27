@@ -1,0 +1,23 @@
+# tor2tcp example torrc
+
+# Necessary for a minimal torrc
+DataDirectory /var/lib/tor
+PidFile /var/lib/tor/tor.pid
+RunAsDaemon 1
+User nobody
+
+# The transparent proxy port should bind to a port you're listening on with the
+# hidden service. If you would like to avoid cleartext communication in
+# general, you could just go for :443 here
+TransPort 46.246.28.219:80
+
+# All the packets that arrive from outside our machine/network do so with the
+# destination 46.246.28.219 - since we want to establish a connection with our
+# hidden service, we're mapping that destination address to the .onion, which
+# makes Tor forward all the packets to that hidden service
+MapAddress 46.246.28.219 u75jkrt3umu2c7pn.onion
+
+# The machine that acts as the transparent proxy for the hidden service is
+# not anonymous anyway, so it makes sense to ./configure --enable-tor2web-mode
+# to impove speed/latency
+Tor2webMode 1
