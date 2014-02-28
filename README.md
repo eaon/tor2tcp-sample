@@ -4,12 +4,12 @@
 
 Say for example you have a website that you feel comfortable having online
 via a public domain name, but you do not feel comfortable having it hosted
-on the location of its clearnet IP because \$reason (for example you are [The
+on the location of its clearnet IP because $reason (for example you are [The
 Pirate Bay](http://jntlesnev5o7zysa.onion/)). Or you want to store all your
 e-mail in an undisclosed location. This configuration enables the transferring
 machine to know as little as possible about the actual hosting machine (because
 it's really a .onion) while using very little resources (i.e. a VPS with 128MB
-RAM for little \$currency/\$timeframe) on the transparent proxy machine and even
+RAM for little $currency/$timeframe) on the transparent proxy machine and even
 less time to set it up.
 
 ## tl;dr 
